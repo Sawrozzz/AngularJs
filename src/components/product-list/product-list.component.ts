@@ -2,16 +2,30 @@ import { Component } from '@angular/core';
 import { Product } from './product';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
+import { Category } from './category';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [NgFor, CommonModule ],
+  imports: [NgFor, CommonModule],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })
+
+
+
 export class ProductListComponent {
   title = 'product list will display here ';
+  categories: Category[] =[
+    {
+      id:1,
+      name:'car'
+    },
+    {
+      id:2,
+      name:'laptop'
+    }
+  ];
   products: Product[] = [
     {
       id: 1,
@@ -38,12 +52,13 @@ export class ProductListComponent {
       price: 30000,
     },
   ];
-  isVisible=true;
-  toggleShow(){
+  isVisible = true;
+  toggleShow() {
     this.isVisible = !this.isVisible;
   }
-  getDummy():string{
+  getDummy(): string {
     return 'This is dummy content';
   }
   message = this.getDummy();
+  //api = https://localhost:7055/api/Categorie
 }

@@ -1,13 +1,16 @@
 <p>{{ title }}</p>
 
 <button (click) = "toggleShow()" class="buy-btn">
-  
   {{isVisible ? "Show" : "Hide" }}
 </button>
-{{message}}
+{{isVisible ? "": "This is dummy content"}}
+
+<div *ngFor = "let c of categories">
+   <span class="id">ID: {{c.id}}</span>
+   <span class="name">ID: {{c.name}}</span>
+</div>
 
 <section class="cardlist">
-
 
 <div class="card" *ngFor="let p of products" >
     <div class="card-header" >
