@@ -15,8 +15,8 @@ import { ProductListComponent } from '../components/product-list/product-list.co
 
 })
 export class AppComponent {
-  title = 'I am Saroj Adhiakri';
-  testDemo = 'This is my first angualr project';
+  title = 'I am Saroj Adhikari';
+  testDemo = 'This is my first angular project';
   isShow = true;
   
 }
