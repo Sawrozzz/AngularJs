@@ -1,37 +1,36 @@
 <p>{{ title }}</p>
 
-<button (click) = "toggleShow()" class="buy-btn">
-  {{isVisible ? "Show" : "Hide" }}
+<button (click)="toggleShow()" class="buy-btn">
+  {{ isVisible ? "Show" : "Hide" }}
 </button>
-{{isVisible ? "": "This is dummy content"}}
+{{ isVisible ? "" : "This is dummy content" }}
 
-<div class="card" *ngFor = "let c of categories">
-  <div class="card-header">
 
-    <span class="id">ID: {{c.id}}</span>
-  </div>
-  <div class="card-body">
-
-    <span class="title">Title: {{c.name}}</span>
-  </div>
-</div>
 
 <section class="cardlist">
-
-<div class="card" *ngFor="let p of products" >
-    <div class="card-header" >
-      <span class="id">ID: {{p.id}}</span>
+  <div class="card" *ngFor="let p of products">
+    <div class="card-header">
+      <span class="id">ID: {{ p.id }}</span>
     </div>
-    <div class="card-body" >
-      <h2 class="title">Title:{{p.title}}</h2>
-      <p class="description">{{p.description}}</p>
-      <p class="price">{{p.price}}</p>
+    <div class="card-body">
+      <h2 class="title">Title:{{ p.title }}</h2>
+      <p class="description">{{ p.description }}</p>
+      <p class="price">{{ p.price }}</p>
     </div>
     <div class="btns">
-
-        <button class="buy-btn">Buy Now</button>
-        <button class="buy-btn">Add to cart</button>
+      <button class="buy-btn">Buy Now</button>
+      <button class="buy-btn">Add to cart</button>
     </div>
-
+  </div>
+  @if(isLoading) { Loading . . . . } @else {
+  
+ <div class="card" *ngFor="let c of categories">
+  <div class="card-header">
+    <span class="id">ID: {{ c.id }}</span>
+  </div>
+  <div class="card-body">
+    <span class="title">Title: {{ c.name }}</span>
+  </div>
 </div>
+  }
 </section>
