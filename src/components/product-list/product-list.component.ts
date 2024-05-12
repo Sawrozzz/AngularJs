@@ -20,30 +20,7 @@ export class ProductListComponent implements OnInit {
   categories: Category[] = [];
   isLoading:boolean=true;
   products: Product[] = [
-    // {
-    //   id: 1,
-    //   title: 'Iphone',
-    //   description: 'Iphone 12 pro max best phone',
-    //   price: 130000,
-    // },
-    // {
-    //   id: 2,
-    //   title: 'Samsung',
-    //   description: 'Samsung s24 max best phone',
-    //   price: 100000,
-    // },
-    // {
-    //   id: 3,
-    //   title: 'Redmi',
-    //   description: 'Redmi note 7 pro best phone in low price',
-    //   price: 30000,
-    // },
-    // {
-    //   id: 5,
-    //   title: 'iphone 15',
-    //   description: 'Redmi note 7 pro best phone in low price',
-    //   price: 30000,
-    // },
+   
   ];
   isVisible = true;
   toggleShow() {
@@ -73,5 +50,4 @@ export class ProductListComponent implements OnInit {
     return 'This is dummy content';
   }
   message = this.getDummy();
-  //api = https://localhost:7055/api/Categorie
 }
