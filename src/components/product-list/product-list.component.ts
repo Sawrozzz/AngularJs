@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
 import { NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { Category } from './Category';
 import { CategoryService } from './category.service';
+import { Category } from './Category';
 
 
 @Component({
